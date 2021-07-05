@@ -88,6 +88,7 @@ app.get("/user",  requiresAuth(), async (req, res) => {
      const expenses = await axios.get(`${API_URL}/reports`, {
        headers: {
          Authorization: `${token_type} ${access_token}`,
+         'auth0-forwarded-for': 10.10.10.10
        },
      });
      // 👆 end of changes 👆
