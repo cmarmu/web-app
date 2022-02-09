@@ -69,7 +69,7 @@ app.get("/", async (req, res) => {
  }
 });
 
-// 👇 add requiresAuth middlware to these private routes  👇 test
+// 👇 add requiresAuth middlware to these private routes  👇 test2
 
 app.get("/user",  requiresAuth(), async (req, res) => {
   res.render("user", {
